@@ -1,0 +1,64 @@
+! Base16 Google Dark
+! Author: Seth Wright (http://sethawright.com)
+
+! base00: #1d1f21
+! base01: #282a2e
+! base02: #373b41
+! base03: #969896
+! base04: #b4b7b4
+! base05: #c5c8c6
+! base06: #e0e0e0
+! base07: #ffffff
+! base08: #CC342B
+! base09: #F96A38
+! base0A: #FBA922
+! base0B: #198844
+! base0C: #3971ED
+! base0D: #3971ED
+! base0E: #A36AC7
+! base0F: #3971ED
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #1d1f21, #1d1f21, #282a2e
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #1d1f21, #e0e0e0, #1d1f21, #e0e0e0, #1d1f21
+rofi.color-active:  #1d1f21, #3971ED, #1d1f21, #1d1f21, #3971ED
+rofi.color-urgent:  #1d1f21, #CC342B, #1d1f21, #1d1f21, #CC342B
+
+! Set the desired separator style
+rofi.separator-style: solid
+
+!URxvt*termName: screen-256color
+!URxvt*geometry: 240x84
+!URxvt*loginShell: true
+!URxvt*scrollstyle: plain
+!URxvt*scrollTtyKeypress: true
+!URxvt*scrollTtyOutput: false
+!URxvt*scrollWithBuffer: false
+!URxvt*secondaryScreen: true
+!URxvt*secondaryScroll: true
+!URxvt*skipScroll: true
+URxvt*scrollBar: false
+!URxvt*scrollBar_right: false
+!URxvt*scrollBar_floating: false
+!URxvt*fading: 30
+!URxvt*utmpInhibit: false
+!URxvt*urgentOnBell: false
+!URxvt*visualBell: true
+!URxvt*mapAlert: true
+!URxvt*mouseWheelScrollPage: false
+URxvt*font: xft:Droid Sans Mono Slashed for Powerline:pixelsize:10
+URxvt*boldFont: xft:Droid Sans Mono Slashed for Powerline:bold:pixelsize:10
+URxvt*italicFont: xft:Droid Sans Mono Slashed for Powerline:italic:autohint=true:pixelsize=10
+URxvt*boldItalicFont: xft:Droid Sans Mono Slashed for Powerline:bold:italic:autohint=true:pixelsize=10
+!URxvt*saveLines: 0
+!URxvt*buffered: true
+!URxvt*hold: false
+!URxvt*internalBorder:
+!URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+!URxvt*perl-ext-common:
+!URxvt*perl-ext:
