@@ -65,3 +65,5 @@ URxvt*boldItalicFont: xft:Droid Sans Mono Slashed for Powerline:bold:italic:auto
 URxvt*perl-lib: /home/inivekin/.config/
 URxvt*perl-ext-common: vim-scrollback
 URxvt*urlLauncher: qb
+
+URxvt*vim-scrollback-fg: 1
