@@ -332,3 +332,6 @@ else
 	  endif
 	endif
 endif
+
+" neovim-vifm
+let $MYVIFMRC="/.vifm/vifmrc"

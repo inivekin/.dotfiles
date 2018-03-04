@@ -55,6 +55,11 @@ if count(g:bundle_groups, 'general')
   Plugin 'junegunn/fzf'
   Plugin 'junegunn/fzf.vim'
   Plugin 'anekos/hledger-vim'
+  if has("nvim")
+	  Plugin 'vifm/neovim-vifm'
+  else
+	  Plugin 'scrooloose/nerdtree'
+  endif
 endif
 " DEVELOPER
 if count(g:bundle_groups, 'devel')
@@ -72,7 +77,6 @@ if count(g:bundle_groups, 'devel')
   Plugin 'honza/vim-snippets'
   Plugin 'Chiel92/vim-autoformat'
   Plugin 'jiangmiao/auto-pairs'
-  Plugin 'scrooloose/nerdtree'
   Plugin 'Xuyuanp/nerdtree-git-plugin'
   Plugin 'godlygeek/tabular'
   Plugin 'mhinz/vim-signify'
@@ -89,6 +93,7 @@ if count(g:bundle_groups, 'devel')
   Plugin 'lervag/vimtex'
   Plugin 'rust-lang/rust.vim'
   Plugin 'racer-rust/vim-racer'
+  Plugin 'joonty/vdebug'
 endif
 " LANGUAGES
 "if count(g:bundle_groups, 'languages')

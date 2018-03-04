@@ -145,3 +145,7 @@ map <leader>gb :Gblame<CR>
 
 map <S-q> :Startify<CR>
 map <C-q> :x<CR>
+
+" Vifm
+
+map <leader>v :Vifm<Space>
