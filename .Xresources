@@ -62,3 +62,6 @@ URxvt*boldItalicFont: xft:Droid Sans Mono Slashed for Powerline:bold:italic:auto
 !URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 !URxvt*perl-ext-common:
 !URxvt*perl-ext:
+URxvt*perl-lib: /home/inivekin/.config/
+URxvt*perl-ext-common: vim-scrollback
+URxvt*urlLauncher: qb
