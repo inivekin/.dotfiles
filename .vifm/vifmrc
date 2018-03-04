@@ -183,6 +183,8 @@ filextype *.djvu
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
+	   \ {Play using cmus in new terminal}
+	   \ urxvt -e bash -i -c 'cmus'
        \ {Play using ffplay}
        \ ffplay -nodisp %c,
        \ {Play using MPlayer}
