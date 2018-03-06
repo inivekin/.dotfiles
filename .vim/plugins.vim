@@ -57,6 +57,7 @@
   nmap <silent>cl :CtrlPLine<CR>
   nmap <silent>cb :CtrlPBuffer<CR>
   nmap <silent>ct :CtrlPBufTag<CR>
+  nmap <silent>cc :CtrlPTag<CR>
 
   let g:ctrlp_custom_ignore = {
         \ 'dir': '\.git$\|\.hg$\|\.svn|\bower_components|\node_modules$',

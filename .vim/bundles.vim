@@ -32,7 +32,8 @@ if count(g:bundle_groups, 'general')
   Plugin 'Stormherz/tablify'
   Plugin 'bling/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
-  Plugin 'kien/ctrlp.vim'
+  "Plugin 'kien/ctrlp.vim'
+  Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'tacahiroy/ctrlp-funky'
   Plugin 'kris89/vim-multiple-cursors'
   Plugin 'mbbill/undotree'
@@ -94,6 +95,7 @@ if count(g:bundle_groups, 'devel')
   Plugin 'rust-lang/rust.vim'
   Plugin 'racer-rust/vim-racer'
   Plugin 'joonty/vdebug'
+  Plugin 'justinmk/vim-syntax-extra'
 endif
 " LANGUAGES
 "if count(g:bundle_groups, 'languages')
