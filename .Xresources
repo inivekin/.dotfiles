@@ -67,3 +67,4 @@ URxvt*perl-ext-common: vim-scrollback
 URxvt*urlLauncher: qb
 
 URxvt*vim-scrollback-fg: 1
+URxvt*vim-scrollback-paste: M-p

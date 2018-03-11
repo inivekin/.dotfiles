@@ -1,111 +1,105 @@
 " PLUGINS BUNDLE
-let vundle_readme=expand($HOME.'/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Plugin.."
-  echo ""
-  silent !mkdir -p $HOME/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle/
+
+" auto install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Required:
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=$HOME/.vim/bundle/vundle/
-  set sessionoptions-=options
-endif
 
-call vundle#rc(expand($HOME.'/.vim/bundle/'))
-Plugin 'gmarik/vundle'
+call plug#begin('~/.vim/bundle')
+Plug 'junegunn/vim-plug'
 
-" Plugin Groups
+" Plug Groups
 " List only the plugin groups you will use
 if !exists('g:bundle_groups')
-  let g:bundle_groups=['general', 'devel', 'languages', 'colorscheme']
+  let g:bundle_groups=['general', 'devel']
 endif
 
-" Plugins here:
+" Plugs here:
 " GENERAL
 if count(g:bundle_groups, 'general')
-  Plugin 'itchyny/calendar.vim'
-  Plugin 'chriskempson/base16-vim'
-  Plugin 'Lokaltog/vim-easymotion'
-  Plugin 'Stormherz/tablify'
-  Plugin 'bling/vim-airline'
-  Plugin 'vim-airline/vim-airline-themes'
-  "Plugin 'kien/ctrlp.vim'
-  Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'tacahiroy/ctrlp-funky'
-  Plugin 'kris89/vim-multiple-cursors'
-  Plugin 'mbbill/undotree'
-  Plugin 'mhinz/vim-startify'
-  Plugin 'tpope/vim-abolish'
-  Plugin 'tpope/vim-commentary'
-  Plugin 'tpope/vim-repeat'
-  Plugin 'tpope/vim-surround'
-  Plugin 'troydm/easybuffer.vim'
-  Plugin 'yonchu/accelerated-smooth-scroll'
-  Plugin 'pelodelfuego/vim-swoop'
-  Plugin 'vimwiki/vimwiki'
-  Plugin 'lilydjwg/colorizer'
-  Plugin 'DrawIt'
-  Plugin 'reedes/vim-pencil'
-  Plugin 'tbabej/taskwiki'
-  Plugin 'farseer90718/vim-taskwarrior'
-  Plugin 'majutsushi/tagbar'
-  Plugin 'powerman/vim-plugin-AnsiEsc'
-  Plugin 'junegunn/fzf'
-  Plugin 'junegunn/fzf.vim'
-  Plugin 'anekos/hledger-vim'
+  Plug 'itchyny/calendar.vim'
+  Plug 'chriskempson/base16-vim'
+  Plug 'Lokaltog/vim-easymotion'
+  Plug 'Stormherz/tablify'
+  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'tacahiroy/ctrlp-funky'
+  Plug 'kris89/vim-multiple-cursors'
+  Plug 'mbbill/undotree'
+  Plug 'mhinz/vim-startify'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
+  Plug 'troydm/easybuffer.vim'
+  Plug 'yonchu/accelerated-smooth-scroll'
+  Plug 'pelodelfuego/vim-swoop'
+  Plug 'vimwiki/vimwiki'
+  Plug 'lilydjwg/colorizer'
+  Plug 'vim-scripts/DrawIt'
+  Plug 'reedes/vim-pencil'
+  Plug 'tbabej/taskwiki'
+  Plug 'farseer90718/vim-taskwarrior'
+  Plug 'majutsushi/tagbar'
+  Plug 'powerman/vim-plugin-AnsiEsc'
+  Plug 'anekos/hledger-vim'
+  Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
   if has("nvim")
-	  Plugin 'vifm/neovim-vifm'
+	  Plug 'vifm/neovim-vifm'
   else
-	  Plugin 'scrooloose/nerdtree'
+	  Plug 'scrooloose/nerdtree'
   endif
 endif
 " DEVELOPER
 if count(g:bundle_groups, 'devel')
   if !has("nvim")
-		Plugin 'Shougo/neocomplete'
-		Plugin 'Shougo/neosnippet'
-		Plugin 'Shougo/neosnippet-snippets'
+		Plug 'Shougo/neocomplete'
+		Plug 'Shougo/neosnippet'
+		Plug 'Shougo/neosnippet-snippets'
   else
-	"Plugin 'ervandew/supertab'
-	Plugin 'Shougo/deoplete.nvim'
+	"Plug 'ervandew/supertab'
+	Plug 'Shougo/deoplete.nvim'
   endif
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'osyo-manga/vim-over'
-  Plugin 'SirVer/ultisnips'
-  Plugin 'honza/vim-snippets'
-  Plugin 'Chiel92/vim-autoformat'
-  Plugin 'jiangmiao/auto-pairs'
-  Plugin 'Xuyuanp/nerdtree-git-plugin'
-  Plugin 'godlygeek/tabular'
-  Plugin 'mhinz/vim-signify'
-  Plugin 'scrooloose/nerdcommenter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'osyo-manga/vim-over'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'Chiel92/vim-autoformat'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'godlygeek/tabular'
+  Plug 'mhinz/vim-signify'
+  Plug 'scrooloose/nerdcommenter'
   if !has("nvim")
-    Plugin 'scrooloose/syntastic'
+    Plug 'scrooloose/syntastic'
   else
-    Plugin 'w0rp/ale'
+    Plug 'w0rp/ale'
   endif
-  Plugin 'chrisbra/unicode.vim'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'sjl/gundo.vim'
-  Plugin 'ludovicchabant/vim-gutentags'
-  Plugin 'lervag/vimtex'
-  Plugin 'rust-lang/rust.vim'
-  Plugin 'racer-rust/vim-racer'
-  Plugin 'joonty/vdebug'
-  Plugin 'justinmk/vim-syntax-extra'
+  Plug 'chrisbra/unicode.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'sjl/gundo.vim'
+  Plug 'ludovicchabant/vim-gutentags'
+  Plug 'lervag/vimtex'
+  Plug 'rust-lang/rust.vim'
+  Plug 'racer-rust/vim-racer'
+  Plug 'joonty/vdebug'
+  Plug 'justinmk/vim-syntax-extra'
 endif
 " LANGUAGES
-"if count(g:bundle_groups, 'languages')
-  "Plugin 'ap/vim-css-color'
-  "Plugin 'sheerun/vim-polyglot'
-  "Plugin 'othree/html5.vim'
-  "Plugin 'othree/javascript-libraries-syntax.vim'
-  "Plugin 'othree/yajs.vim'
-  "Plugin 'slava/vim-spacebars'
-  "Plugin 'burnettk/vim-angular'
-  "Plugin 'kchmck/vim-coffee-script'
-  "Plugin 'leafgarland/typescript-vim'
-"endif
+if count(g:bundle_groups, 'languages')
+  Plug 'ap/vim-css-color'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'othree/html5.vim'
+  Plug 'othree/javascript-libraries-syntax.vim'
+  Plug 'othree/yajs.vim'
+  Plug 'slava/vim-spacebars'
+  Plug 'burnettk/vim-angular'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'leafgarland/typescript-vim'
+endif
+
+call plug#end()

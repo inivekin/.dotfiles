@@ -149,3 +149,6 @@ map <C-q> :x<CR>
 " Vifm
 
 map <leader>v :Vifm<Space>
+
+" FZF
+map <leader>f :FZF<CR>

@@ -136,3 +136,9 @@ set -o vi
 
 # git bare repository config alias for dotfile backup
 alias config='/usr/bin/git --git-dir=/home/inivekin/.cfg --work-tree=/home/inivekin'
+
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi"

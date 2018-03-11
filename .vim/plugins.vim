@@ -47,6 +47,13 @@
   let g:easybuffer_horizontal_height = '15'
 
 " ctrlp
+
+  " Use fd for ctrlp.
+	if executable('fd')
+		let g:ctrlp_user_command = 'fd -c never "" "%s"'
+		let g:ctrlp_use_caching = 0
+	endif
+
   let g:ctrlp_cache_dir = $HOME.'/.vim/.ctrlp_cache'
   let g:ctrlp_working_path_mode = 'ra'
   let g:ctrlp_extensions = ['funky']
