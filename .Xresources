@@ -66,5 +66,7 @@ URxvt*perl-lib: /home/inivekin/.config/
 URxvt*perl-ext-common: vim-scrollback
 URxvt*urlLauncher: qb
 
+!disable iso mode for scrollback
+URxvt*iso14755: False
 URxvt*vim-scrollback-fg: 1
 URxvt*vim-scrollback-paste: M-p

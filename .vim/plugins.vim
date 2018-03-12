@@ -343,3 +343,4 @@ endif
 
 " neovim-vifm
 let $MYVIFMRC="/.vifm/vifmrc"
+

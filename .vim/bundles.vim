@@ -86,7 +86,6 @@ if count(g:bundle_groups, 'devel')
   Plug 'lervag/vimtex'
   Plug 'rust-lang/rust.vim'
   Plug 'racer-rust/vim-racer'
-  Plug 'joonty/vdebug'
   Plug 'justinmk/vim-syntax-extra'
 endif
 " LANGUAGES
