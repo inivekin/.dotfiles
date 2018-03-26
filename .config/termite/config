@@ -1,6 +1,9 @@
 [options]
 font = Droid Sans Mono Slashed for Powerline 12
 
+[browser]
+browser = qb
+
 [colors]
 # Base16 Google Dark
 # Author: Seth Wright (http://sethawright.com)
@@ -19,8 +22,8 @@ color7  = #c5c8c6
 color15 = #ffffff
 
 # Red
-color1  = #CC342B
-color9  = #CC342B
+color1  = #F96A38
+color9  = #F96A38
 
 # Green
 color2  = #198844

@@ -152,3 +152,6 @@ map <leader>v :Vifm<Space>
 
 " FZF
 map <leader>f :FZF<CR>
+
+" vimtex
+let maplocalleader = ','

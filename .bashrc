@@ -140,7 +140,7 @@ alias config='/usr/bin/git --git-dir=/home/inivekin/.cfg --work-tree=/home/inive
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND="fd --type file --follow --color=always --exclude plugins/"
+export FZF_DEFAULT_COMMAND="fd --hidden --follow --color=always --exclude stm32/"
 export FZF_DEFAULT_OPTS="--ansi"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 

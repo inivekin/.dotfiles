@@ -76,8 +76,8 @@ set $base0F #3971ED
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec termite
+bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
