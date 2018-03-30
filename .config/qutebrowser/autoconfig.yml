@@ -170,6 +170,8 @@ settings:
     global: 8pt monospace
   hints.border:
     global: '1px solid #FBA922'
+  hints.scatter:
+    global: true
   input.partial_timeout:
     global: 5000
   input.spatial_navigation:
@@ -178,6 +180,8 @@ settings:
     global: 0
   session.default_name:
     global: null
+  tabs.background:
+    global: false
   tabs.indicator.width:
     global: 3
   tabs.title.format_pinned:
