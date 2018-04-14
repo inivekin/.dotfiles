@@ -233,7 +233,7 @@ if has("nvim")
 	let g:UltiSnipsExpandTrigger="<C-k>"
 	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-	call deoplete#custom#set('ultisnips', 'rank', 9999)
+	call deoplete#custom#source('ultisnips', 'rank', 9999)
 	"let g:UltiSnipsExpandTrigger = \"<Tab>"
 	let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 	let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"

@@ -155,6 +155,8 @@ settings:
     global: '#e0e0e0'
   completion.height:
     global: 50%
+  downloads.location.directory:
+    global: ~/downloads/
   editor.command:
     global:
     - termite
