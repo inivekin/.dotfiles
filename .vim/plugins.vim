@@ -230,26 +230,18 @@ endif
 if has("nvim")
     let g:deoplete#enable_at_startup = 1
 
-	let g:UltiSnipsExpandTrigger="<C-k>"
 	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 	call deoplete#custom#source('ultisnips', 'rank', 9999)
-	"let g:UltiSnipsExpandTrigger = \"<Tab>"
+	let g:UltiSnipsExpandTrigger="<C-k>"
 	let g:UltiSnipsJumpForwardTrigger = "<Tab>"
-	let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
+	let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 	let g:UltiSnipsListSnippets="<C-Tab>"
 
 	if !exists('g:deoplete#omni#input_patterns')
 		let g:deoplete#omni#input_patterns = {}
 	endif
-	let g:deoplete#omni#input_patterns.tex =
-			\   '\\(?:'
-			\  .   '\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
-			\  .  '|\w*ref(?:\s*\{[^}]*|range\s*\{[^,}]*(?:}{)?)'
-			\  .  '|hyperref\s*\[[^]]*'
-			\  .  '|includegraphics\*?(?:\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-			\  .  '|(?:include(?:only)?|input)\s*\{[^}]*'
-			\  .')'
+	let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
 else
   " neocomplete
 	let neocomplete_readme=expand('~/.vim/bundle/neocomplete/README.md')
@@ -343,4 +335,5 @@ endif
 
 " neovim-vifm
 let $MYVIFMRC="/.vifm/vifmrc"
+
 
