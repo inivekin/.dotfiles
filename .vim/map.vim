@@ -155,3 +155,11 @@ map <leader>f :FZF<CR>
 
 " vimtex
 let maplocalleader = ','
+
+" Goyo and limelight
+
+nmap <leader>` :Goyo<CR>:Limelight!!<CR>:SignifyToggle<CR>
+
+" tagbar
+
+map <leader>t :TagbarToggle<CR>

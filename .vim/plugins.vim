@@ -8,7 +8,7 @@
   let g:airline_inactive_collapse=1
   let g:airline_powerline_fonts = 1
   "let g:bufferline_echo = 0
-  "let g:airline#extensions#bufferline#enabled = 1
+  let g:airline#extensions#bufferline#enabled = 1
   let g:airline#extensions#syntastic#enabled = 1
   let g:airline#extensions#hunks#enabled = 1
   let g:airline#extensions#ctrlp#show_adjacent_modes = 1
@@ -43,7 +43,7 @@
   endif
 
 " buffergator
-  nmap <silent><leader>b :EasyBufferHorizontal<CR>
+  nmap <leader>b :EasyBufferHorizontal<CR>
   let g:easybuffer_horizontal_height = '15'
 
 " ctrlp
@@ -336,4 +336,7 @@ endif
 " neovim-vifm
 let $MYVIFMRC="/.vifm/vifmrc"
 
+" Vimtex
 
+"setlocal spell
+" suggestions by z= and add to accepted words by zg

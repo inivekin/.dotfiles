@@ -19,6 +19,7 @@ exec --no-startup-id ~/.fehbg
 exec synclient TapButton3=0 &
 exec unclutter -idle 2 -root &
 exec xinput set-prop 9 "Synaptics Scrolling Distance" -73 -73 &
+exec xrandr --dpi 150
 
 new_window 1pixel
 

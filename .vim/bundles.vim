@@ -26,9 +26,6 @@ if count(g:bundle_groups, 'general')
   Plug 'Stormherz/tablify'
   Plug 'bling/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'tacahiroy/ctrlp-funky'
-  Plug 'kris89/vim-multiple-cursors'
   Plug 'mbbill/undotree'
   Plug 'mhinz/vim-startify'
   Plug 'tpope/vim-abolish'
@@ -36,7 +33,7 @@ if count(g:bundle_groups, 'general')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'troydm/easybuffer.vim'
-  Plug 'yonchu/accelerated-smooth-scroll'
+  "Plug 'yonchu/accelerated-smooth-scroll'
   Plug 'pelodelfuego/vim-swoop'
   Plug 'vimwiki/vimwiki'
   Plug 'lilydjwg/colorizer'
@@ -47,7 +44,10 @@ if count(g:bundle_groups, 'general')
   Plug 'majutsushi/tagbar'
   Plug 'powerman/vim-plugin-AnsiEsc'
   Plug 'anekos/hledger-vim'
+  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/limelight.vim'
   Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+  Plug 'jeetsukumaran/vim-buffergator'
   if has("nvim")
 	  Plug 'vifm/neovim-vifm'
   else
@@ -61,7 +61,6 @@ if count(g:bundle_groups, 'devel')
 		Plug 'Shougo/neosnippet'
 		Plug 'Shougo/neosnippet-snippets'
   else
-	"Plug 'ervandew/supertab'
 	Plug 'Shougo/deoplete.nvim'
   endif
   Plug 'tpope/vim-fugitive'
@@ -81,8 +80,8 @@ if count(g:bundle_groups, 'devel')
   endif
   Plug 'chrisbra/unicode.vim'
   Plug 'pangloss/vim-javascript'
-  Plug 'sjl/gundo.vim'
-  Plug 'ludovicchabant/vim-gutentags'
+  "Plug 'sjl/gundo.vim'
+  "Plug 'ludovicchabant/vim-gutentags'
   Plug 'lervag/vimtex'
   Plug 'rust-lang/rust.vim'
   Plug 'racer-rust/vim-racer'

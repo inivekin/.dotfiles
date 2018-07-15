@@ -70,3 +70,5 @@ URxvt*urlLauncher: qb
 URxvt*iso14755: False
 URxvt*vim-scrollback-fg: 1
 URxvt*vim-scrollback-paste: M-p
+
+Xft.dpi:150

@@ -31,3 +31,4 @@ map <C-e> :VimwikiSplitLink<CR>
 map <leader><CR> :VimwikiVSplitLink<CR>
 nmap q :q<CR>
 nmap <leader>' :VimwikiUISelect<CR>
+nmap <leader>" :VimwikiUISelect<CR>
