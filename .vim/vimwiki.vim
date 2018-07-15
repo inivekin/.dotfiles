@@ -13,7 +13,10 @@ let g:vimwiki_list = [{'path':'~/drive/projects/wiki/',
                       \ 'auto_toc':'1',
                       \ 'template_path':'~/drive/projects/rpg/templates/',
                       \ 'template_default':'default',
-                      \ 'template_ext':'.html'}]
+                      \ 'template_ext':'.html'},
+					  \ {'path':'~/drive/projects/main/',
+					  \ 'syntax':'markdown', 'ext': '.md'}]
+
 let g:vimwiki_h1_headers = 1
 let g:vimwiki_table_auto_fmt = 0
 

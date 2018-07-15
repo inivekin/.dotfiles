@@ -136,6 +136,7 @@ set -o vi
 
 # git bare repository config alias for dotfile backup
 alias config='/usr/bin/git --git-dir=/home/inivekin/.cfg --work-tree=/home/inivekin'
+alias tasks='/usr/bin/git --git-dir=/home/inivekin/.todo --work-tree=/home/inivekin'
 
 
 
